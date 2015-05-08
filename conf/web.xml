@@ -37,7 +37,7 @@
   <!-- The default servlet for all web applications, that serves static     -->
   <!-- resources.  It processes all requests that are not mapped to other   -->
   <!-- servlets with servlet mappings (defined either here or in your own   -->
-  <!-- web.xml file.  This servlet supports the following initialization    -->
+  <!-- web.xml file).  This servlet supports the following initialization   -->
   <!-- parameters (default values are in square brackets):                  -->
   <!--                                                                      -->
   <!--   debug               Debugging detail level for messages logged     -->
@@ -857,7 +857,7 @@
     </mime-mapping>
     <mime-mapping>
         <!-- OpenDocument Drawing Template -->
-        <extension>otg </extension>
+        <extension>otg</extension>
         <mime-type>application/vnd.oasis.opendocument.graphics-template</mime-type>
     </mime-mapping>
     <mime-mapping>
@@ -873,7 +873,7 @@
     <mime-mapping>
         <!-- OpenDocument Spreadsheet Template -->
         <extension>ots</extension>
-        <mime-type>application/vnd.oasis.opendocument.spreadsheet-template </mime-type>
+        <mime-type>application/vnd.oasis.opendocument.spreadsheet-template</mime-type>
     </mime-mapping>
     <mime-mapping>
         <!-- OpenDocument Text Template -->
