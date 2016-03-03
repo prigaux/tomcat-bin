@@ -250,7 +250,7 @@ if [ "$1" = "jpda" ] ; then
   if [ -z "$JPDA_OPTS" ]; then
     JPDA_OPTS="-agentlib:jdwp=transport=$JPDA_TRANSPORT,address=$JPDA_ADDRESS,server=y,suspend=$JPDA_SUSPEND"
   fi
-  CATALINA_OPTS="$CATALINA_OPTS $JPDA_OPTS"
+  CATALINA_OPTS="$JPDA_OPTS $CATALINA_OPTS"
   shift
 fi
 
@@ -321,6 +321,8 @@ elif [ "$1" = "start" ] ; then
           ps -p $PID >/dev/null 2>&1
           if [ $? -eq 0 ] ; then
             echo "Tomcat appears to still be running with PID $PID. Start aborted."
+            echo "If the following process is not a Tomcat process, remove the PID file and try again:"
+            ps -f -p $PID
             exit 1
           else
             echo "Removing/clearing stale PID file."
